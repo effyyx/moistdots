@@ -1,0 +1,77 @@
+// import "vanilla"
+
+* {
+    font: "Font Awesome 5 Brands 26";
+    foreground: #f8f8f2;
+    background-color: #282a36;
+    active-background: #6272a4;
+    urgent-background: #ff5555;
+    selected-background: @active-background;
+    selected-urgent-background: @urgent-background;
+    selected-active-background: @active-background;
+    separatorcolor: @active-background;
+    bordercolor: @active-background;
+}
+#window {
+
+    width: 4.75em ; // widht pls
+    anchor: north;
+    location: north;
+    background-color: @background;
+    border: 2;
+    border-radius: 6;
+    border-color: @bordercolor;
+    x-offset: 758; // window offset
+    margin: 38px 0px 0px 0px; // 1st num margin from top of screen 
+}
+#mainbox {
+    border:  0;
+    padding: 0;
+    margin: 0;
+}
+#listview {
+	padding: 0;
+	border: 0;
+	margin: 0;
+    layout:     horizontal;
+    fixed-height: 0;
+    border-color: @bordercolor;
+    spacing:      0px ;
+    scrollbar:    false;
+}
+#inputbar {
+    spacing:    0;
+    text-color: @foreground;
+    padding:    0px ;
+    children:   [ ];
+}
+
+ // top, right, bottom, left
+
+#element {
+  margin: 0 0 2 2 ;
+  border:  0;
+  text-color: @foreground;
+  padding: 0.3em 0.3em 0.3em 0.3em;
+
+}
+#element-text.selected.normal {
+    background-color: @selected-background;
+    text-color:       @foreground;
+}
+#element.normal.normal {
+    background-color: @background;
+    text-color:       @foreground;
+}
+#element.selected.normal {
+    background-color: @selected-background;
+    text-color:       @foreground;
+}
+#element-text.normal.normal {
+    background-color: @background;
+    text-color:       @foreground;
+}
+#element-text.alternate.normal {
+    background-color: @background;
+    text-color:       @foreground;
+}
